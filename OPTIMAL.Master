@@ -1,0 +1,50 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="OPTIMAL.master.cs" Inherits="OPTIMALWeb.OPTIMAL" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Welcome to Optimalgroup</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div align="center">
+        <a href="http://www.optimal-group.org" target="_blank">
+            <asp:Image ID="Image1" runat="server" ImageUrl="~/Image/Optimal_img.jpg" Width="75%"/>
+        </a>
+    </div>
+
+    <div id="container">
+        <div id="left">
+            <h4><span class="menu_first_letter">Navigation</span></h4>
+            <div id="navcontainer">
+                <ul id="navlist">
+                    <li><a href="./">Home </a></li>
+                    <li><a href="./Members.aspx">Members</a></li>
+                    <li><a href="./Projects.aspx">Projects</a></li>
+                    <li><a href="./Publications.aspx">Publications </a></li>
+                    <li><a href="./Activities.aspx">Seminars (biweekly) </a></li>
+                    <li><a href="./Resources.aspx">Resources</a></li>
+                    <li><a href="./Links.aspx">Links</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="right">
+
+            <form id="form1" runat="server">
+                <div>
+                    <asp:ContentPlaceHolder ID="CPH_Rightbody" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </form>
+
+
+        </div>
+
+    </div>
+</body>
+</html>

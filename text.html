@@ -1,0 +1,146 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 根据这个下拉选项框： -->
+<div class="layui-inline">
+    <label class="layui-form-label">冷危标识</label>
+         <div class="layui-input-inline" style="width: 180px;">
+            <select name="DangerRefSig" id="DangerRefSig" lay-filter="DangerRefSig" onchange="showform()">
+                 <option value="0">非冷冻或危险货物</option>
+                 <option value="1">冷藏箱</option>
+                 <option value="2">危险品</option>
+				 <option value="3">冷藏箱1</option>
+                 <option value="4">危险品1</option>
+            </select>
+         </div>
+</div>
+
+<div class="form-row" id="year1-form" style="display: none;">
+    1111
+</div>
+<div class="form-row" id="year2-form" style="display: none;">
+    2222
+</div>
+<div class="form-row" id="year3-form" style="display: none;">
+    3333
+</div>
+<div class="form-row" id="year4-form" style="display: none;">
+    4444
+</div>
+<script>
+    const select = document.querySelector('#DangerRefSig')
+    const year1 = document.querySelector('#year1-form')
+    const year2 = document.querySelector('#year2-form')
+    const year3 = document.querySelector('#year3-form')
+    const year4 = document.querySelector('#year4-form')
+    function showform() {
+        if (select.value === '1') {
+            year1.style.display = 'block'
+            year2.style.display = 'none'
+			year3.style.display = 'none'
+            year4.style.display = 'none'
+        } else if (select.value === '2') {
+            year1.style.display = 'none'
+            year2.style.display = 'block'
+			year3.style.display = 'none'
+            year4.style.display = 'none'
+		} else if (select.value === '3') {
+            year1.style.display = 'none'
+            year2.style.display = 'none'
+			year3.style.display = 'block'
+            year4.style.display = 'none'
+		} else if (select.value === '4') {
+            year1.style.display = 'none'
+            year2.style.display = 'none'
+			year3.style.display = 'none'
+            year4.style.display = 'block'
+        } else {
+            year1.style.display = 'none'
+            year2.style.display = 'none'
+			year3.style.display = 'none'
+            year4.style.display = 'none'
+        }
+    }
+</script>
+</body>
+
+<!-- 
+    <div class="date_box"></div>
+    <h3>
+        <b>Publications by year: </b>        
+        <select name="ctl00$CPH_Rightbody$DropDownList2" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$CPH_Rightbody$DropDownList2\&#39;,\&#39;\&#39;)&#39;, 0)" id="CPH_Rightbody_DropDownList2">
+	<option selected="selected" value="2022">2022</option>
+	<option value="2021">2021</option>
+	<option value="2020">2020</option>
+
+
+</select>
+    </h3>
+
+
+
+<div class="form-row" id="year2022-form" style="display: none;">
+    <li>Yuan-Gang Pan, Ivor W Tsang, Wei-Jie Chen, Gang Niu, Masashi Sugiyama. <a href='http://www.jmlr.org/papers/v23/20-315.html' target="_blank">Fast and Robust Rank Aggregation against Model Misspecification</a>, 
+         <b>Journal of Machine Learning Research</b>, 2022, 23(23):1−35. 
+         <span><a href='Resources/Code/CoarsenRank.html' target="_blank" style="color: green">[Material]</a></span>
+    </li>
+
+</div>
+<div class="form-row" id="year2021-form" style="display: none;">
+                    <div class="div_item">
+                    <li>Chun-Na Li, Yuan-Hai Shao*,Wotao Yin, Ming-Zeng Liu. <a href='http://' target="_blank">Robust and sparse linear discriminant analysis via alternating direction method of multipliers</a>, 
+                                    <b> IEEE Transactions on Neural Networks and Learning Systems.</b>, 2021, inpress. 
+                                <span><a href='Resources/Code/RSLDA.html' target="_blank" style="color: green">[Material]</a></span>
+                    </li>
+                </div>
+            
+                <div class="div_item">
+                    <li>Bai Lan, Yuan-Hai Shao, Zhen Wang, Wei-Jie Chen, Nai-Yang Deng. <a href='http://ieeexplore.ieee.org/abstract/document/9343292/' target="_blank">Multiple flat projections for cross-manifold clustering</a>, 
+                                    <b>IEEE Transactions on Cybernetics</b>, 2021, inpress. 
+                                
+                    </li>
+                </div>
+</div>
+<div class="form-row" id="year2020-form" style="display: none;">
+                    <div class="div_item">
+                    <li>Wei-Jie Chen, Yuan-Hai Shao, Chun-Na Li, Ming-Zeng Liu, Zhen Wang, Nai-Yang Deng. <a href='http://dx.doi.org/10.1016/j.neucom.2019.09.069' target="_blank"> ν-projection twin support vector machine for pattern classification</a>, 
+                                    <b>Neurocomputing</b>, 2020, 376: 10-24. 
+                                
+                    </li>
+                </div>
+</div>
+
+    
+<script>
+    const select = document.querySelector('#DangerRefSig')
+    const year2022 = document.querySelector('#yef2022-form')
+	const year2021 = document.querySelector('#yef2021-form')
+	const year2020 = document.querySelector('#yef2020-form')
+
+    function showform() {
+        if (select.value === '2022') {
+            year2022.style.display = 'block'
+            yeay2021.style.display = 'none'
+			year2020.style.display = 'none'
+
+        } else if (select.value === '2021') {
+            year2022.style.display = 'none'
+            yeay2021.style.display = 'block'
+			year2020.style.display = 'none'
+
+        } else if (select.value === '2020') {
+            year2022.style.display = 'none'
+            yeay2021.style.display = 'none'
+			year2020.style.display = 'block'
+        }
+    }
+</script>
+</body>
+ -->
